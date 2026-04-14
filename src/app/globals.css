@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+/* ============================================
+   ONPRES DESIGN SYSTEM
+   Colores extraídos del logo (gradiente)
+   y posts de Instagram (precios en amarillo)
+   ============================================ */
+
+@theme {
+  /* --- Colores del logo --- */
+  --color-onpres-orange: #FF6B2B;
+  --color-onpres-red: #FF3B5C;
+  --color-onpres-purple: #9B59B6;
+  --color-onpres-blue: #3498DB;
+  --color-onpres-cyan: #00BCD4;
+
+  /* --- Color de precios (posts IG) --- */
+  --color-onpres-price: #FF9500;
+
+  /* --- Colores base (estilo Apple) --- */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F7;
+  --color-bg-tertiary: #FAFAFA;
+
+  --color-text-primary: #1D1D1F;
+  --color-text-secondary: #6E6E73;
+  --color-text-tertiary: #86868B;
+
+  --color-border-light: #E5E5E7;
+  --color-border-medium: #D2D2D7;
+
+  /* --- Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* --- Font --- */
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ============================================
+   ESTILOS BASE
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   UTILIDADES PERSONALIZADAS
+   ============================================ */
+
+/* Texto con gradiente del logo */
+.text-gradient {
+  background: linear-gradient(135deg, #FF6B2B, #FF3B5C, #9B59B6, #3498DB, #00BCD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Botón primario (naranja/rojo) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #FF6B2B, #FF3B5C);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón secundario (cyan/azul) */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #3498DB, #00BCD4);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón outline */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1.5px solid var(--color-border-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-onpres-orange);
+  color: var(--color-onpres-orange);
+}
+
+/* Card de producto */
+.card-product {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.card-product:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+
+/* Badge de categoría/marca */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+/* Precio estilo IG */
+.price-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--color-onpres-price);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+/* Input de filtro */
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--color-border-medium);
+}
+
+.filter-chip.active {
+  background: var(--color-text-primary);
+  color: white;
+}
