@@ -33,21 +33,23 @@ export const metadata: Metadata = {
   authors: [{ name: "Onpres" }],
   creator: "Onpres",
   publisher: "Onpres",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_URL || "https://onpres.ar"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_URL || "https://onpres.vercel.app/",
+  ),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: process.env.NEXT_PUBLIC_URL || "https://onpres.ar",
+    url: process.env.NEXT_PUBLIC_URL || "https://onpres.vercel.app/",
     title: "Onpres | Tecnología a un click",
     description:
       "Los mejores productos Apple, Lenovo y más. Stock propio, envío a todo el país.",
     siteName: "Onpres",
     images: [
       {
-        url: "/og-preview.png",
+        url: "/preview.webp",
         width: 1200,
         height: 630,
         alt: "Onpres — Tecnología a un click",
@@ -59,7 +61,7 @@ export const metadata: Metadata = {
     title: "Onpres | Tecnología a un click",
     description:
       "Los mejores productos Apple, Lenovo y más. Stock propio, envío a todo el país.",
-    images: ["/og-preview.png"],
+    images: ["/preview.webp"],
   },
   robots: {
     index: true,
