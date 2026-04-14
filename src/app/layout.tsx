@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       "Los mejores productos Apple, Lenovo y más. Stock propio, envío a todo el país.",
     images: [
       {
-        url: `${SITE_URL}/og-preview.webp`,
+        url: `${SITE_URL}/preview.webp`,
         width: 1200,
         height: 630,
         alt: "Onpres — Tecnología a un click",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: "Onpres | Tecnología a un click",
     description:
       "Los mejores productos Apple, Lenovo y más. Stock propio, envío a todo el país.",
-    images: [`${SITE_URL}/og-preview.webp`],
+    images: [`${SITE_URL}/preview.webp`],
   },
 
   verification: {
